@@ -73,10 +73,9 @@ const InputFromMethods = () => {
             <div>
                 {
                     hasBeenSubmitted?
-                    <h1>Thank you for submitting the form!</h1> :
-                    <h1>Please fill the form</h1>
+                    <h1>Welcome {firstname} {lastname}!</h1> :
+                    <h1>Please Create an Account</h1>
                 }
-                <h1>Form</h1>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>First Name: </label>
