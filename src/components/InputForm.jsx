@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react'
 
 const InputFromMethods = () => {
     const [firstname, setFirstname] = useState("")
     const [lastname, setLastname] = useState("")
     const [email, setEmail] = useState("")
-    const[password, setPassword] = useState("")
+    const [password, setPassword] = useState("")
     const [confirm, setConfirm] = useState("")
     const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false)
 
@@ -16,7 +17,7 @@ const InputFromMethods = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(!firstnameError && !lastnameError && !emailError && !passwordError &&!confirmError){
+        if(!firstnameError && !lastnameError && !emailError && !passwordError && !confirmError){
             const newUser = {firstname, lastname, email, password, confirm}
             console.log(newUser)
             setHasBeenSubmitted(true)
@@ -25,18 +26,18 @@ const InputFromMethods = () => {
         }
     }
 
-    const handleFirstName =(f) =>{
-        setFirstname(f.target.value)
-        if(f.target.value.length < 3 && f.target.value.length > 0){
+    const handleFirstName =(e) =>{
+        setFirstname(e.target.value)
+        if(e.target.value.length < 3 && e.target.value.length > 0){
             setFirstnameError("First Name must be at least 3 characters")
         } else {
             setFirstnameError("")
         }
     }
     
-    const handleLastName =(f) =>{
-        setLastname(f.target.value)
-        if(f.target.value.length < 3 && f.target.value.length > 0){
+    const handleLastName =(e) =>{
+        setLastname(e.target.value)
+        if(e.target.value.length < 3 && e.target.value.length > 0){
             setLastnameError("Last Name must be at least 3 characters")
         } else {
             setLastnameError("")
@@ -52,18 +53,18 @@ const InputFromMethods = () => {
         }
     }
 
-    const handlePassword = (p) =>{
-        setPassword(p.target.value)
-        if(p.target.value.length < 8){
+    const handlePassword = (e) =>{
+        setPassword(e.target.value)
+        if(e.target.value.length < 8){
             setPasswordError("Password must be at least 8 characters")
         } else {
             setPasswordError("")
         }
     }
 
-    const handleConfirm = (p) =>{
-        setConfirm(p.target.value)
-        if(p.target.value !== password){
+    const handleConfirm = (e) =>{
+        setConfirm(e.target.value)
+        if(e.target.value !== password){
             setConfirmError("Passwords must match")
         } else {
             setConfirmError("")
