@@ -80,47 +80,27 @@ const InputFromMethods = () => {
                     <div>
                         <label>First Name: </label>
                         <input type="text" name="firstname" onChange={handleFirstName} value={firstname}/>
-                        {
-                            firstnameError?
-                            <p> {firstnameError} </p>:
-                            ""
-                        }
+                            <p> {firstnameError} </p>
                     </div>
                     <div>
                         <label>Last Name: </label>
                         <input type="text" name="lastname" onChange={handleLastName} value={lastname}/>
-                        {
-                            lastnameError?
-                            <p> {lastnameError} </p>:
-                            ""
-                        }
+                            <p> {lastnameError} </p>
                     </div>
                     <div>
                         <label>Email: </label>
                         <input type="text" name="email" onChange={handleEmail} value={email}/>
-                        {
-                            emailError?
-                            <p> {emailError} </p>:
-                            ""
-                        }
+                            <p> {emailError} </p>
                     </div>
                     <div>
                         <label>Password: </label>
                         <input type="password" name="password" onChange={handlePassword} value={password}/>
-                        {
-                            passwordError?
-                            <p> {passwordError} </p>:
-                            ""
-                        }
+                            <p> {passwordError} </p>
                     </div>
                     <div>
                         <label>Confirm Password: </label>
                         <input type="password" name="confirm" onChange={handleConfirm} value={confirm}/>
-                        {
-                            confirmError?
-                            <p> {confirmError} </p>:
-                            ""
-                        }
+                            <p> {confirmError} </p>
                     </div>
                     <button disabled={confirmError || passwordError|| firstnameError || lastnameError || emailError}>Submit</button>
                 </form>
